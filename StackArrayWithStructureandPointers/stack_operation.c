@@ -72,7 +72,7 @@ void peek(struct stack *s)              //function to display the topmost elemen
         return;
     }
 
-    printf("Item at top = %d", s->stackArr[s->top]);
+    printf("Item at top = %d\n", s->stackArr[s->top]);
 }
 
 
@@ -84,9 +84,10 @@ int main()
     struct stack s;
     s.top=-1;
 
+    printf("\nEnter your choice:\n1.Push\n2.Pop\n3.Display\n4.Peek\n5.Exit\n");
+
     while(1)
     {
-        printf("\nEnter your choice:\n1.Push\n2.Pop\n3.Display\n4.Peek\n5.Exit\n");
         choice=getch();
         switch(choice)
         {
@@ -98,7 +99,7 @@ int main()
 
             case '2':       //pop operation
                 data=pop(&s);
-                printf("%d\n", data);
+                printf("Popped item is:%d\n", data);
                 break;
 
             case '3':           //display all items in the stack
