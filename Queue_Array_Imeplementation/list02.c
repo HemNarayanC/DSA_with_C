@@ -7,7 +7,7 @@
 // Define a structure to represent an item in the list
 struct Item {
     int id;
-    char name[50];
+    char name[100];
     int phone;
     char address[100];
 };
