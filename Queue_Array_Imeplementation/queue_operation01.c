@@ -77,7 +77,7 @@ void display(struct queue *ptr)
     printf("Items in the queue are: \n");
     for(i=ptr->front; i<=ptr->rear; i++)
     {
-        printf("%d\n", ptr->queueArr[i]);
+        printf("%d\t", ptr->queueArr[i]);
     }
 }
 
@@ -106,7 +106,7 @@ int main()
     q.front = q.rear = -1;
     while(1)
     {
-        printf("Enter the option:\n1.Enqueue\n2.Dequeue\n3.Display\n4.Front\n5.RearIndex\n6.Exit\n");
+        printf("\nEnter the option:\n1.Enqueue\n2.Dequeue\n3.Display\n4.Front\n5.RearIndex\n6.Exit\n");
         ch = getch();
         switch(ch)
         {
@@ -141,6 +141,4 @@ int main()
                 printf("Invalid Choice.");
         }
     }
-
-    
 }
