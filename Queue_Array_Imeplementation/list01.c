@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 10
 
 // Define a structure to represent an item in the list
 struct Item {
