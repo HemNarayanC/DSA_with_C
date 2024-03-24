@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 #include <string.h>
 #define MAX 5
 #define TRUE 1
