@@ -9,7 +9,8 @@
 
 struct stackInfix{
     int top;
-    char infix[MAX], postfix[MAX], stackChar[MAX];
+    char infix[MAX], postfix[MAX];
+    char stackChar[MAX];        //array to store the operators
 };
 
 int isFull(struct stackInfix *ptr)
