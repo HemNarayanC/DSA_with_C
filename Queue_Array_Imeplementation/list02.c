@@ -161,9 +161,9 @@ void searchItemByName(struct List *list, const char *name) {
             break;
         }
     }
-    if (!found) {
-        printf("Item with name '%s' not found.\n", name);
-    }
+        if (!found) {
+            printf("Item with name '%s' not found.\n", name);
+        }
 }
 
 int main() {
