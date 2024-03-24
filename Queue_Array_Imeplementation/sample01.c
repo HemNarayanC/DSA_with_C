@@ -40,7 +40,6 @@ int main()
 {
     struct List newList;
     newList.size=0;
-
     struct Item c1={1,"Hem", 9800012345};
     addItems(&newList, c1);
     struct Item c2={2,"Pooja", 9826032145};
