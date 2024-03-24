@@ -43,5 +43,5 @@ int main()
     for(i=top; i>=0; i--)
         printf("%d", pop());
 
-    return 0;
+return 0;
 }
