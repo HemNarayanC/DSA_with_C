@@ -1,0 +1,70 @@
+Insert Front:
+1. Start
+2. Check if the list is not full, i.e., if the size of the list is less than MAX_SIZE.
+3. If yes, shift all elements to the right to make space for the new item.
+4. Insert the new item at the front of the list.
+5. Increment the size of the list.
+6. End.
+
+Insert End:
+1. Start
+2. Check if the list is not full, i.e., if the size of the list is less than MAX_SIZE.
+3. If yes, insert the new item at the end of the list.
+4. Increment the size of the list.
+5. End.
+
+Insert After:
+1. Start
+2. Search for the specified item ID in the list.
+3. If found, check if the list is not full.
+4. If yes, shift all elements to the right from the position after the found item to make space for the new item.
+5. Insert the new item after the found item.
+6. Increment the size of the list.
+7. End.
+
+Insert Before:
+1. Start
+2. Search for the specified item ID in the list.
+3. If found, check if the list is not full.
+4. If yes, shift all elements to the right from the position of the found item to make space for the new item.
+5. Insert the new item before the found item.
+6. Increment the size of the list.
+7. End.
+
+Remove Front:
+1. Start
+2. Check if the list is not empty, i.e., if the size of the list is greater than 0.
+3. If yes, shift all elements to the left to remove the first item from the list.
+4. Decrement the size of the list.
+5. End.
+
+Remove End:
+1. Start
+2. Check if the list is not empty, i.e., if the size of the list is greater than 0.
+3. If yes, decrement the size of the list to remove the last item from the list.
+4. End.
+
+Remove Item:
+1. Start
+2. Search for the specified item ID in the list.
+3. If found, shift all elements to the left from the position after the found item to remove the item.
+4. Decrement the size of the list.
+5. End.
+
+List Items:
+1. Start
+2. Check if the list is empty, i.e., if the size of the list is 0.
+3. If not empty, iterate through each item in the list and print its details.
+4. End.
+
+Search Item By ID:
+1. Start
+2. Search for the specified item ID in the list.
+3. If found, print the details of the item.
+4. End.
+
+Search Item By Name:
+1. Start
+2. Search for the specified item name in the list.
+3. If found, print the details of the item.
+4. End.

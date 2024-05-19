@@ -31,7 +31,7 @@ void enqueue(struct queue *q, int data)
 
 int dequeue(struct queue *q)
 {
-    int data;
+    int data; 
     if(q->front==-1)
     {
         printf("Queue underflow.\n");
@@ -58,7 +58,7 @@ void display(struct queue *ptr)
     int i;
     if(ptr->front==-1)
     {
-        printf("Stack underflow.\n");
+        printf("Queue underflow.\n");
         return;
     }
     printf("Items in a Queue:\n");
@@ -74,7 +74,7 @@ void frontElement(struct queue *ptr)
 {
     if(ptr->front==-1)
     {
-        printf("Stack underflow.\n");
+        printf("Queue underflow.\n");
         return;
     }
 

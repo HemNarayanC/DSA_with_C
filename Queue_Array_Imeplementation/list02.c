@@ -16,7 +16,7 @@ struct Item {
 struct List {
     struct Item items[MAX_SIZE];
     int size;
-};
+};  
 
 // Function to initialize the list
 void initList(struct List *list) {
@@ -33,7 +33,7 @@ void insertFront(struct List *list, struct Item item) {
         list->size++;
     } else {
         printf("List is full, cannot insert.\n");
-    }
+    } 
 }
 
 // Function to insert an item at the end of the list
@@ -63,7 +63,7 @@ void insertAfter(struct List *list, struct Item item, int id) {
         }
     }
     printf("Item with ID %d not found.\n", id);
-}
+} 
 
 // Function to insert an item before a specified item
 void insertBefore(struct List *list, struct Item item, int id) {
@@ -82,7 +82,7 @@ void insertBefore(struct List *list, struct Item item, int id) {
         }
     }
     printf("Item with ID %d not found.\n", id);
-}
+}  
 
 // Function to remove an item from the front of the list
 void removeFront(struct List *list) {
@@ -164,7 +164,7 @@ void searchItemByName(struct List *list, const char *name) {
         if (!found) {
             printf("Item with name '%s' not found.\n", name);
         }
-}
+} 
 
 int main() {
     struct List list;
@@ -205,10 +205,10 @@ int main() {
                 printf("4. Before an item\n");
                 printf("Enter your choice: ");
                 scanf("%d", &choice);
-                switch (choice) {
+                switch (choice) { 
                     case 1:
                         insertFront(&list, newItem);
-                        break;
+                        break; 
                     case 2:
                         insertEnd(&list, newItem);
                         break;
@@ -226,7 +226,7 @@ int main() {
                         printf("Invalid choice.\n");
                 }
                 break;
-            case 2:
+            case 2: 
                 printf("From where to remove?\n");
                 printf("1. Front\n");
                 printf("2. End\n");

@@ -26,7 +26,7 @@ int isEmpty(struct queue *ptr)
     if(ptr->front==-1 || ptr->front > ptr->rear)        /* If front pointer is at -1 or front exceeds rear, Queue is empty;  when we keep dequing
                                                             the item front index gets increased */
         return 1;
-    else
+    else 
         return 0;
 }
 
@@ -115,7 +115,7 @@ int main()
                 scanf("%d", &data);
                 enqueue(&q, data);
                 break;
-
+ 
             case '2':
                 data = dequeue(&q);
                 printf("Dequeued data is %d\n", data);
