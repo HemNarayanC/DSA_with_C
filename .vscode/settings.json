@@ -2,6 +2,8 @@
     "files.associations": {
         "EXPCHECK.C": "cpp",
         "stdio.h": "c",
-        "EXP_CHECK.C": "cpp"
-    }
+        "EXP_CHECK.C": "cpp",
+        "SINGLYC8.C": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "D:\\MinGW\\bin\\gcc.exe"
 }

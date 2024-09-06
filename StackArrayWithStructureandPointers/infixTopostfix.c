@@ -1,10 +1,6 @@
-
-//WAP to convert the infix expression into the postfix expression
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <conio.h>
 #define MAX 100
 
 struct stackInfix{
@@ -58,20 +54,33 @@ int getPrecedence(char ch)
     {
         case '$':
             return 3;
-            break;
         
         case '/':
         case '*':
             return 2;
-            break;
 
         case '+':
         case '-':
             return 1;
-            break;
         
         default:
             return 0;
+    }
+}
+
+int getAssociativity(char ch)
+{
+    switch(ch)
+    {
+        case '$':
+            return 1;  // Right associative
+        case '/':
+        case '*':
+        case '+':
+        case '-':
+            return 0;  // Left associative
+        default:
+            return -1; // Not an operator
     }
 }
 
@@ -86,34 +95,35 @@ void intoPost(struct stackInfix *s)
         switch(symbol)
         {
             case '(':
-                    push(s, symbol);
-                    break;
+                push(s, symbol);
+                break;
                 
-            case ')':            // Pop operators from the stack and append to the postfix expression until '(' is encountered
-                    while((next=pop(s))!='(')
-                        s->postfix[j++]=next;
-                        break;
+            case ')':  // Pop operators from the stack and append to the postfix expression until '(' is encountered
+                while((next=pop(s))!='(')
+                    s->postfix[j++]=next;
+                break;
+
             case '$':
             case '/':
             case '+':
             case '*':
             case '-':
-                 // Pop operators with higher precedence from the stack and append to the postfix expression
-                    while(!isEmpty(s) && getPrecedence(s->stackChar[s->top]) > getPrecedence(symbol))
-                        s->postfix[j++]=s->stackChar[s->top];
-                    push(s, symbol);
-                    break;
+                // Pop operators with higher or equal precedence from the stack and append to the postfix expression
+                while(!isEmpty(s) && getPrecedence(s->stackChar[s->top]) >= getPrecedence(symbol) && getAssociativity(symbol) == 0)
+                    s->postfix[j++]=pop(s);
+                push(s, symbol);
+                break;
             
-            default:
+            default:    //If it's operand then directly push into the poststack
                 s->postfix[j++]= symbol;
         }
     }
-    // Pop any remaining operators from the stack and append to the postfix expression
+    // Pop any remaining operators from the Operator stack and append to the postfix expression
+    // suitable example for this is A+B*(C-D/E)
     while(!isEmpty(s))
         s->postfix[j++]=pop(s);
-    s->postfix[j++]='\0';
+    s->postfix[j]='\0';
 }
-
 
 // Function to display the postfix expression
 void displayPostfix(struct stackInfix *p)
@@ -124,6 +134,7 @@ void displayPostfix(struct stackInfix *p)
     {
         printf("%c", p->postfix[i]);
     }
+    printf("\n");
 }
 
 int main()
@@ -132,8 +143,8 @@ int main()
     s.top=-1;
     printf("Enter the infix expression: ");
     fgets(s.infix, MAX, stdin);
+    s.infix[strcspn(s.infix, "\n")] = '\0';  // Remove newline character
     intoPost(&s);
     displayPostfix(&s);
     return 0;
 }
-

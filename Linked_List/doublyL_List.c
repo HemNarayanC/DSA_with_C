@@ -32,7 +32,7 @@ void insertAtBeginning() {
     scanf("%d", &data);
     newNode = getNode(data);
 
-    if (header == NULL) { // Empty list
+    if (header == NULL){ // Empty list
         header = newNode;
         printf("Inserted at the front.\n");
     } else {

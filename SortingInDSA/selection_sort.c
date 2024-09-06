@@ -4,7 +4,7 @@
 int getSmallestPosition(int arr[], int i, int j)
 {
     int pos=i, k;      //let us assume that smallest element is in kth position
-    for(k=i; k<=j; k++)
+    for(k=i+1; k<=j; k++)
     {
         if(arr[k]<arr[pos])
         {
@@ -26,7 +26,7 @@ void SelectionSort(int arr[], int n)
     }
 }
 void main()
-{
+ {
     int arr[]={5, 12, 6, 2, 7, 9, 10, 4};
     int i, n =sizeof(arr)/sizeof(int);
     printf("Before Seclection Sort: \n");

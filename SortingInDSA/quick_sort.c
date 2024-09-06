@@ -31,7 +31,7 @@ void quicksort(int arr[], int lb, int ub)
             temp = arr[lb];
             arr[lb] = arr[up];
             arr[up] = temp;
-            quicksort(arr, lb, up-1);       //sort the list of smal ler elements using quick sort
+            quicksort(arr, lb, up-1);       //sort the list of smaller elements using quick sort
             quicksort(arr,up+1, ub);        //sort the list of bigger elements using quick sort
         } 
     }

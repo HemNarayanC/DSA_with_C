@@ -120,7 +120,7 @@ void intoPrefix(struct stack *s, char *infix)
 
         else
         {
-            s->prefix[j++]=symbol;
+            s->prefix[j++]=symbol;      //if the symbol is an operand
         }   
     }
 

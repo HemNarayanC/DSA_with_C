@@ -70,7 +70,7 @@ struct node *getnode(int n)
    ptrnew->next = NULL;
    return ptrnew;
 }
-void insertAtFront()
+void insertAtFront() 
 {
    int data;
    struct node *ptrnew;

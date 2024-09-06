@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-#include <Stdlib.h>
+#include <stdlib.h>
 
 void bubblesort(int [], int);
 void main()
